@@ -2,7 +2,7 @@ import os
 
 from flask import Flask, jsonify, request
 from dotenv import load_dotenv
-from skimage import io
+import json
 
 # Load local environment
 load_dotenv()
@@ -13,11 +13,10 @@ app = Flask(__name__)
 @app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
-        body = request.json
-        print(body)
-        image = io.imread(body['image_url'])
-        print(image)
-        # TODO: Use AI model prediction and return the result as a JSON response
+        body = json.loads(request.get_data().decode('utf-8'))
+        print(body['image_url'])
+
+        # TODO: Integrate an AI model in here and return the result as a JSON response
         # This is a dummy response, change it as you like.
         return jsonify({
             'is_positive': True, 
