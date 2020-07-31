@@ -14,10 +14,18 @@ The source codes of all CerviCam AI models. The core is built by PyTorch and Fla
 ## **File structure**
 ```
 AI-API
+├── api                             
+│   ├── helper.py                   <- Global functions
+│   ├── urls.py                     <- All endpoints and handler for every endpoint
+│   └── views.py                    <- Endpoint handlers
 │
-├── Dockerfile                      <- Use this when you want to create an image of this app by Docker
-├── server.py                       <- Where routers and controllers exist, and also used for the development server
-├── wsgi.py                         <- If you want to use wsgi-like tool to run the server, such as gunicorn
+├── instance                             
+│   ├── app.py                      <- A function to run the application
+│   ├── setting.py                  <- Env variables
+│   └── wsgi.py                     <- If you want to use wsgi-like tool to run the server, such as gunicorn
+│
+├── Dockerfile                      <- Use this when you want to create an image by Docker
+├── manage.py                       <- All available commands to configure/run the application
 ├── .env                            <- Local variables
 ├── env                             <- Local environment, where all installed packages will be stored
 ├── requirements.txt                <- All required packages are defined in here
@@ -109,9 +117,14 @@ Activate your local environment from [this section](#activate/deactivate-local-e
 ## **Usage**
 Ensure you already activated your local environment in [here](#activate/deactivate-local-environment), something will go wrong if the environment hasn't  set up properly when you use one of these commands.
 
-- Run application
+- Run application in development
     ```bash
-    python server.py
+    python manage.py server
+    ```
+
+- Run application in production
+    ```bash
+    gunicorn instance.wsgi:app
     ```
 
 ## **Troubleshootings**
