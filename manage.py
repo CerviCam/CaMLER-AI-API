@@ -1,7 +1,7 @@
 import sys
 import os
-from instance import setting
-from instance.app import run_app
+from project import setting
+from project.app import run_app
 
 if __name__ == '__main__':
     if sys.argv[1] == 'run':
