@@ -3,7 +3,7 @@ ENV PYTHONUNBUFFERED 1
 
 RUN mkdir /app
 ADD ./api /app/api
-ADD ./instance /app/instance
+ADD ./project /app/project
 ADD ./requirements.txt /app/requirements.txt
 WORKDIR /app
 RUN pip install -r requirements.txt
