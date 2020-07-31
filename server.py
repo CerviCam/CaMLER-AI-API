@@ -33,4 +33,5 @@ if __name__ == '__main__':
     app.run(
         host=os.getenv('AI_API_HOST', '0.0.0.0'),
         port=os.getenv('AI_API_PORT', '2020'),
+        debug=bool(int(os.getenv('DEBUG', 1)))
     )

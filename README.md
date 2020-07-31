@@ -35,11 +35,13 @@ You must setup the environment before going anywhere. Here are simple steps you 
     ```
 2. Create **.env** file in the root of project to set environment variables. Here is the format:
     ```
+    DEBUG=
     AI_API_HOST=
     AI_API_PORT=
     ```
     e.g:
     ```
+    DEBUG=1
     AI_API_HOST=localhost
     AI_API_PORT=2020
     ``` 
@@ -47,6 +49,7 @@ You must setup the environment before going anywhere. Here are simple steps you 
     More detail about the **environment variables**:
     | Variable          | Optional    | Value                                                                             |
     |-------------------|-------------|-----------------------------------------------------------------------------------|
+    | DEBUG             | Yes         | Either **0** or **1**. The default is **1**, means True                           |
     | AI_API_HOST       | Yes         | The default is **localhost**                                                      |
     | AI_API_PORT       | Yes         | The default is **2020**                                                           |
 
