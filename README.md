@@ -19,7 +19,7 @@ AI-API
 │   ├── urls.py                     <- All endpoints and handler for every endpoint
 │   └── views.py                    <- Endpoint handlers
 │
-├── instance                             
+├── project                             
 │   ├── app.py                      <- A function to run the application
 │   ├── setting.py                  <- Env variables
 │   └── wsgi.py                     <- If you want to use wsgi-like tool to run the server, such as gunicorn
@@ -124,7 +124,7 @@ Ensure you already activated your local environment in [here](#activate/deactiva
 
 - Run application in production
     ```bash
-    gunicorn instance.wsgi:app
+    gunicorn project.wsgi:app
     ```
 
 ## **Troubleshootings**
