@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM nvcr.io/nvidia/pytorch:19.04-py3
 ENV PYTHONUNBUFFERED 1
 
 RUN mkdir /app
