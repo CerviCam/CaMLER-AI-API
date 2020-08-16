@@ -37,3 +37,5 @@ if state_file_name != None:
             }
         ],
     )
+else:
+    AI_MODEL = None

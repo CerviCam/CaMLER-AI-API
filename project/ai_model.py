@@ -9,7 +9,7 @@ class AIModel:
         self.classes = classes
         self.model = model
         self.model.fc = nn.Linear(fc_size, len(classes))
-        self.model.load_state_dict(torch.load(state_path))
+        self.model.load_state_dict(torch.load(state_path, map_location=torch.device('cpu')))
         # Buat ngecek ada GPU atau ngga
         # run_on_gpu = torch.cuda.is_available()
         # if run_on_gpu:
