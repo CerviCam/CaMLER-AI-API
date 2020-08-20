@@ -11,11 +11,11 @@ def predict():
             return (None, status.HTTP_503_SERVICE_UNAVAILABLE)
         else:
             image = Image.open(BytesIO(request.files['image'].read()))
-            result = AI_MODEL.predict(image)
+            _class, proba = AI_MODEL.predict(image)
             return (
                 jsonify({
-                    'result': result[0],
-                    'proba': result[1],
+                    'class': _class,
+                    'proba': proba,
                 }), 
                 status.HTTP_200_OK
             )

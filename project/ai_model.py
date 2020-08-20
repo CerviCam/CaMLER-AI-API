@@ -5,8 +5,7 @@ from torch import nn
 import io
 
 class AIModel:
-    def __init__(self, model, classes):
-        self.classes = classes
+    def __init__(self, model):
         self.model = model
         # Buat ngecek ada GPU atau ngga
         # run_on_gpu = torch.cuda.is_available()
@@ -40,4 +39,4 @@ class AIModel:
         #     pr = F.softmax(res)
         #     for idx, prob in enumerate(pr):
         #         print(imagenet_classes[str(idx)][1], ' ', prob.item())
-        return self.classes[result_idx], probability
+        return result_idx, probability

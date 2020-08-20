@@ -26,16 +26,6 @@ if model_file_name != None:
             os.path.join(AI_MODELS_PATH, model_file_name),
             map_location=torch.device('cpu')
         ),
-        classes = [
-            {
-                "code": 0,
-                "label": 'Negatif',
-            },
-            {
-                "code": 1,
-                "label": 'Positif',
-            }
-        ],
     )
 else:
     AI_MODEL = None
