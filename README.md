@@ -21,11 +21,11 @@ AI-API
 │
 ├── project                             
 │   ├── app.py                      <- A function to run the application
-│   ├── setting.py                  <- Env variables
-│   └── wsgi.py                     <- If you want to use wsgi-like tool to run the server, such as gunicorn
+│   └── setting.py                  <- Env variables
 │
 ├── Dockerfile                      <- Use this when you want to create an image by Docker
 ├── manage.py                       <- All available commands to configure/run the application
+├── wsgi.py                     <- If you want to use wsgi-like tool to run the server, such as gunicorn
 ├── .env                            <- Local variables
 ├── env                             <- Local environment, where all installed packages will be stored
 ├── requirements.txt                <- All required packages are defined in here
@@ -119,7 +119,7 @@ Ensure you already activated your local environment in [here](#activate/deactiva
 
 - Run application in development
     ```bash
-    python manage.py server
+    python manage.py run
     ```
 
 - Run application in production
