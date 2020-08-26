@@ -10,3 +10,5 @@ def run_app(*args, **kwargs):
         add_route(app)
 
     app.run(*args, **kwargs)
+
+    return app
