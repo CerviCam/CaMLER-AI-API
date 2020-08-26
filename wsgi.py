@@ -1,4 +1,4 @@
-from project.setting.app import run_app
+from project.app import run_app
 
 if __name__ == "__main__":
     # Run application
