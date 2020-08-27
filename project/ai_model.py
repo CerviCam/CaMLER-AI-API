@@ -24,7 +24,7 @@ class AIModel:
                 [0.299, 0.224, 0.225]
             )
         ])
-        return transformer(image).unsqueeze(0)
+        return transformer(image.convert('RGB')).unsqueeze(0)
 
     def predict(self, image):
         # torch.cuda.empty_cache() # If and only if the cuda is available
