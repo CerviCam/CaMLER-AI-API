@@ -1,11 +1,12 @@
 import sys
 import os
 from project import setting
-from project.app import run_app
+from project.app import create_app
 
 if __name__ == '__main__':
     if sys.argv[1] == 'run':
-        run_app(
+        app = create_app()
+        app.run(
             host=setting.HOST,
             port=setting.PORT,
             debug=setting.DEBUG,
