@@ -104,7 +104,7 @@ Activate your local environment from [this section](#activate/deactivate-local-e
        ```
 
 ### **Notable**
-1. **Prefer to edit requirements.txt and then install** rather than install manually and then copy all new installed packages to requirements.txt.
+1. **Prefer to edit requirements.txt and then install** instead of install manually and then copy all new installed packages to requirements.txt.
 
     In simple words, don't do this:
     ```bash
